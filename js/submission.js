@@ -48,7 +48,7 @@ function progressPatientsList() {
 }
 
 function highlightNewHandovers() {
-    document.getElementById('id03').style.display='none'
+    document.getElementById('id03').style.display = 'none'
     showNewHandover()
     setTimeout("hideNewHandover()", 1500);
 }

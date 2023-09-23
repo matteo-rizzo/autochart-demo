@@ -198,17 +198,17 @@ function editTable() {
 }
 
 $(".add-row").click(function () {
-    $("#editableTable").find("tbody tr:first").before("<tr><td data-field='name'></td><td data-field='name'></td><td data-field='name'></td><td data-field='name'></td><td><a class='button button-small edit' title='Edit'><i class='fa fa-pencil'></i></a> <a class='button button-small' title='Delete'><i class='fa fa-trash'></i></a></td></tr>");
+    $("#editable-table").find("tbody tr:first").before("<tr><td data-field='name'></td><td data-field='name'></td><td data-field='name'></td><td data-field='name'></td><td><a class='button button-small edit' title='Edit'><i class='fa fa-pencil'></i></a> <a class='button button-small' title='Delete'><i class='fa fa-trash'></i></a></td></tr>");
     editTable();
     setTimeout(function () {
-        $("#editableTable").find("tbody tr:first td:last a[title='Edit']").click();
+        $("#editable-table").find("tbody tr:first td:last a[title='Edit']").click();
     }, 200);
 
     setTimeout(function () {
-        $("#editableTable").find("tbody tr:first td:first input[type='text']").focus();
+        $("#editable-table").find("tbody tr:first td:first input[type='text']").focus();
     }, 300);
 
-    $("#editableTable").find("a[title='Delete']").unbind('click').click(function (e) {
+    $("#editable-table").find("a[title='Delete']").unbind('click').click(function (e) {
         $(this).closest("tr").remove();
     });
 
@@ -218,7 +218,7 @@ function myFunction() {
 
 }
 
-$("#editableTable").find("a[title='Delete']").click(function (e) {
+$("#editable-table").find("a[title='Delete']").click(function (e) {
     var x;
     if (confirm("Are you sure you want to delete entire row?") == true) {
         $(this).closest("tr").remove();

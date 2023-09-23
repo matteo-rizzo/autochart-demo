@@ -7,7 +7,7 @@ function textAnalysis() {
 }
 
 function showAnalysis() {
-    document.getElementById('id02').style.display='block'
+    document.getElementById('id02').style.display = 'block'
 }
 
 function move() {

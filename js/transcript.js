@@ -1,20 +1,4 @@
-document.getElementById('transcribe').onclick = function(){
-    const placeholderText = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar pretium ligula eu\n" +
-        " . Aenean interdum sodales sodales. Nullam tempor nec odio nec tincidunt. Sed sagittis\n" +
-        " turpis. Nullam dolor lorem, condimentum in cursus sed, tristique ut enim. Suspendisse\n" +
-        "  est nec quam ullamcorper pretium. Vestibulum tellus ante, sollicitudin et arcu eu,\n" +
-        "  rutrum ligula. Oxigen level in blood is keyword 120 </b>. Integer\n" +
-        "  turpis id nibh volutpat, placerat dapibus lectus auctor. Donec eu lacus at ligula luctus\n" +
-        "  aliquet quis augue. <br>\n" +
-        "  consequat mollis nisl in tempor. Lorem ipsum dolor sit amet, consectetur adipiscing\n" +
-        " . Duis tincidunt vitae risus ut porttitor. In dolor risus, vestibulum ut odio ut, posuere\n" +
-        "  velit. Nam id imperdiet ligula, eu egestas justo. Aliquam erat volutpat. In non turpis\n" +
-        " , imperdiet nisl vel, imperdiet augue. Curabitur sodales, justo quis sodales ornare,\n" +
-        "  nisl vulputate dui, nec posuere nunc ex a tellus. Aliquam gravida blandit sem at\n" +
-        " . Vivamus sed urna mattis, tincidunt tellus et, aliquet elit. In cursus ipsum libero,\n" +
-        "  pellentesque nunc interdum a. Sed ac nibh vitae mi varius congue. Maecenas id lacus a\n" +
-        "  tempus finibus vehicula quis arcu. Cras non pretium neque."
-
+document.getElementById('transcribe').onclick = function () {
+    const placeholderText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar eget massa ac viverra. Integer blandit egestas mi, sit amet tristique elit laoreet quis. Vivamus ante tellus, porttitor non tristique faucibus, finibus at ligula. Nunc risus justo, ullamcorper sed enim ac, finibus hendrerit neque. Vivamus egestas eros quis pharetra hendrerit. Aliquam nulla ex, vestibulum quis efficitur quis, malesuada sit amet massa. Vestibulum hendrerit faucibus lacus et iaculis. Ut non justo eu dolor sollicitudin dignissim.\n" + "\n" + "Proin aliquet viverra pretium. Curabitur quis felis imperdiet, convallis nunc non, suscipit neque. Integer ex nunc, blandit at congue at, egestas at erat. Nullam ut augue justo. Sed ac augue ipsum. Fusce cursus nulla nibh, ut pharetra tortor interdum vel. Vestibulum condimentum consequat arcu, vel luctus ligula pulvinar vitae. Mauris ut augue quis risus posuere molestie. Donec in euismod magna. Etiam magna nisi, elementum eu sodales at, pretium et mauris. Nullam vitae pellentesque mi. Ut tincidunt interdum leo in volutpat. Phasellus malesuada, mauris non hendrerit vulputate, quam massa convallis eros, non sodales turpis libero non nisl. Sed sodales, mauris quis mattis luctus, lorem arcu elementum lorem, eget venenatis nisi sem quis ante. Morbi enim metus, consectetur in faucibus sit amet, pellentesque vel ante."
     document.getElementById('transcription').innerHTML = placeholderText
-
 }

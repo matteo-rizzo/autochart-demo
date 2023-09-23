@@ -7,6 +7,7 @@
     font-size: 22px;
     font-family: Verdana;
 }
+
 button {
     padding: 5px 10px;
     border: 1px solid grey;
@@ -20,20 +21,25 @@ button {
     padding-top: 20px;
     justify-content: center;
 }
+
 .audio-controls button {
     margin: 0px 5px;
 }
+
 canvas {
     margin-top: 10px;
     background-color: black;
 }
+
 select {
     height: 25px;
     margin: 0px 5px;
 }
+
 a {
     margin-left: 20px;
 }
+
 .app {
     text-align: center;
     padding-top: 20px;
@@ -74,9 +80,48 @@ td:last-child .button .fa {
 
 /* --- END editable table END --- */
 
+/* --- START Scrollable table START --- */
+
+/* Style for the container div */
+.table-container {
+    display: flex;
+}
+
+/* Style for each table */
+.table-container table {
+    width: 50%; /* Adjust the width as needed */
+    margin-right: 10px; /* Add some spacing between the tables */
+}
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+/* Style for the scrollable divs */
+.scrollable {
+    max-height: 300px; /* Set a maximum height for scrollable area */
+    width: 100%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Add a border for clarity */
+}
+
+.scrollable a {
+    margin: 0;
+}
+
+/* --- END Scrollable table END --- */
+
 .highlight {
-    color:red;
-    background-color:blue;
+    color: red;
+    background-color: blue;
 }
 
 b {
@@ -87,26 +132,24 @@ body, h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif
 }
 
-h2 {
-    font-size: 18px !important;
-    margin-bottom: 1em;
-}
-
-body {
-    background-color: #111;
+th {
+    font-weight: 500;
 }
 
 hr {
-    border-top: 2px solid #333;
+    margin: auto;
+    width: 300px;
+    border-top: 1px solid #ccc;
+}
+
+.w3-button {
+    border-radius:32px;
+    border: 1px solid #007AFF;
+    color: #007AFF;
 }
 
 .w3-row-padding img {
     margin-bottom: 12px
-}
-
-#main {
-    color: white;
-    background-color: #222222;
 }
 
 #loading-bar {
@@ -122,44 +165,12 @@ hr {
     z-index: 2;
 }
 
-#img-analysis-bar {
+#analysis-bar {
     height: 24px;
     width: 0;
     background: lightgrey;
 }
 
-#details {
-    background-color: #111111;
-    padding: 2.5%;
-}
-
-#layers-texts hr {
-    width: 200px;
-    opacity: 0.7;
-}
-
-#layers-texts table tr:first-child:hover {
-    background-color: #777;
-    color: #ffffff;
-}
-
-#layers-texts table tr:nth-child(even) {
-    background-color: #444;
-}
-
-#layers-texts table tr:nth-child(odd) {
-    background-color: #777;
-}
-
-#layers-texts table tr:hover {
-    color: #111111;
-    background-color: lightgray;
-    cursor: pointer;
-}
-
-#layers-texts table td, #layers-texts table th {
-    text-align: center;
-}
 
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {
