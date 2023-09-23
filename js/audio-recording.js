@@ -1,3 +1,36 @@
+function showRecorder() {
+    let modal = document.getElementById('id01');
+    modal.classList.remove("w3-hide")
+    modal.style.display = "block";
+    modal.style.zIndex = "4";
+
+    let btn1 = document.getElementById('make-chart');
+    btn1.classList.add("w3-hide")
+    let btn2 = document.getElementById('save-recording');
+    btn2.classList.remove("w3-hide")
+
+    document.getElementById('transcription').innerHTML = ""
+}
+
+function saveRecordingAndTranscript() {
+    let modal = document.getElementById('id01');
+    modal.style.display = "none";
+    modal.style.zIndex = "2";
+
+    let btn = document.getElementById('show-recorder');
+    btn.classList.add("w3-hide")
+    let btns = document.getElementById('check-rec');
+    btns.classList.remove("w3-hide")
+}
+
+
+function resetRecordingButtons() {
+    let btn = document.getElementById('show-recorder');
+    btn.classList.remove("w3-hide")
+    let btns = document.getElementById('check-rec');
+    btns.classList.add("w3-hide")
+}
+
 (async () => {
     let leftchannel = [];
     let rightchannel = [];
