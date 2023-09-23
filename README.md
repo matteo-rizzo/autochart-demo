@@ -1,5 +1,5 @@
-# dental-ai-demo
+# autochart-demo
 
-A prototype simulation for Dental AI
+A prototype simulation of AI for nursing
 
-http://matteo-rizzo.github.io/dental-ai-demo.
+http://matteo-rizzo.github.io/autochart-demo.
