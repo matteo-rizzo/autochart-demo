@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+      <!-- Speech-to-text HANDOVER -->
+
+      <div id="id04" class="w3-modal" style="z-index: 4">
+      <div class="w3-modal-content w3-card-4" style="width: 75%">
+      <header class="w3-container w3-red">
+      <span onclick="document.getElementById('id04').style.display='none'"
+      class="w3-button w3-display-topright">&times;</span>
+      <h2>Modal Header</h2>
+      </header>
+
+      <!-- Transcription -->
+
+      <div class="w3-container w3-half w3-teal">
+      <h1>Chart report transcript</h1>
+      <label for="transcription">The transcription of your report will show up here</label>
+      <textarea id="transcription-2" rows="10" cols="50"></textarea>
+      <button onclick="textAnalysis()" class="w3-button"
+      style="width: 70%">
+      Make chart
+      </button>
+      </div>
+
+      <!-- Audio recording -->
+
+      <div class="w3-container w3-half">
+      <div class="app">
+      <select name="" id="micSelect"></select>
+
+      <select id="visSelect">
+      <option value="frequencybars">Bar</option>
+      <option value="sinewave">Wave</option>
+      <option value="circle">Circle</option>
+      </select>
+
+      <a id="download">Download</a>
+
+      <div class="audio-controls">
+      <button id="record">Record</button>
+      <button id="stop">Stop</button>
+      <button id="transcribe">Transcribe</button>
+      <audio id="audio" controls></audio>
+      </div>
+
+      <div id="msg">Recording...</div>
+      <canvas id="recording-canvas" width="500" height="300"></canvas>
+      </div>
+      </div>
+      <footer class="w3-container w3-red">
+      <p>Modal Footer</p>
+      </footer>
+      </div>
+      </div></title>
+</head>
+<body>
+
+</body>
+</html>

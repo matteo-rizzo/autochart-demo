@@ -11,7 +11,6 @@
     let context = null;
     let analyser = null;
     let canvas = document.getElementById("recording-canvas");
-    console.log(canvas)
     let canvasCtx = canvas.getContext("2d");
     let visualSelect = document.querySelector("#visSelect");
     let micSelect = document.querySelector("#micSelect");
@@ -43,7 +42,7 @@
 
     function getStream(constraints) {
         if (!constraints) {
-            constraints = { audio: true, video: false };
+            constraints = {audio: true, video: false};
         }
         return navigator.mediaDevices.getUserMedia(constraints);
     }
@@ -126,7 +125,7 @@
 
         let inputIndex = 0;
 
-        for (let index = 0; index < length; ) {
+        for (let index = 0; index < length;) {
             result[index++] = leftChannel[inputIndex];
             result[index++] = rightChannel[inputIndex];
             inputIndex++;
@@ -198,7 +197,7 @@
         }
 
         // our final binary blob
-        const blob = new Blob([view], { type: "audio/wav" });
+        const blob = new Blob([view], {type: "audio/wav"});
 
         const audioUrl = URL.createObjectURL(blob);
         console.log("BLOB ", blob);
@@ -288,12 +287,7 @@
                     barHeight = dataArrayAlt[i];
 
                     canvasCtx.fillStyle = "rgb(" + (barHeight + 100) + ",50,50)";
-                    canvasCtx.fillRect(
-                        x,
-                        HEIGHT - barHeight / 2,
-                        barWidth,
-                        barHeight / 2
-                    );
+                    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
 
                     x += barWidth + 1;
                 }
@@ -346,9 +340,8 @@
 
         stream = await getStream({
             audio: {
-                deviceId: { exact: micSelect.value }
-            },
-            video: false
+                deviceId: {exact: micSelect.value}
+            }, video: false
         });
         setUpRecording();
     };
