@@ -1,0 +1,169 @@
+/* --- START Audio recording START --- */
+
+#msg {
+    visibility: hidden;
+    color: red;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: Verdana;
+}
+button {
+    padding: 5px 10px;
+    border: 1px solid grey;
+    font-size: 18px;
+    background: white;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: center;
+}
+.audio-controls button {
+    margin: 0px 5px;
+}
+canvas {
+    margin-top: 10px;
+    background-color: black;
+}
+select {
+    height: 25px;
+    margin: 0px 5px;
+}
+a {
+    margin-left: 20px;
+}
+.app {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* --- END Audio recording END --- */
+
+
+/* --- START editable table START --- */
+
+.button.button-small {
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 10px;
+}
+
+td input[type=text],
+td select {
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    padding: 2px 8px;
+}
+
+td:last-child .button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+}
+
+td:last-child .button .fa {
+    line-height: 30px;
+    width: 30px;
+}
+
+/* --- END editable table END --- */
+
+.highlight {
+    color:red;
+    background-color:blue;
+}
+
+b {
+    color: blueviolet;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif
+}
+
+h2 {
+    font-size: 18px !important;
+    margin-bottom: 1em;
+}
+
+body {
+    background-color: #111;
+}
+
+hr {
+    border-top: 2px solid #333;
+}
+
+.w3-row-padding img {
+    margin-bottom: 12px
+}
+
+#main {
+    color: white;
+    background-color: #222222;
+}
+
+#loading-bar {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+#img-analysis-bar {
+    height: 24px;
+    width: 0;
+    background: lightgrey;
+}
+
+#details {
+    background-color: #111111;
+    padding: 2.5%;
+}
+
+#layers-texts hr {
+    width: 200px;
+    opacity: 0.7;
+}
+
+#layers-texts table tr:first-child:hover {
+    background-color: #777;
+    color: #ffffff;
+}
+
+#layers-texts table tr:nth-child(even) {
+    background-color: #444;
+}
+
+#layers-texts table tr:nth-child(odd) {
+    background-color: #777;
+}
+
+#layers-texts table tr:hover {
+    color: #111111;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#layers-texts table td, #layers-texts table th {
+    text-align: center;
+}
+
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0
+    }
+}
