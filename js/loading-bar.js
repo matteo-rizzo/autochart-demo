@@ -11,7 +11,7 @@ function showAnalysis() {
 }
 
 function move() {
-    let elem = document.getElementById("img-analysis-bar");
+    let elem = document.getElementById("analysis-bar");
     let width = 1;
     const id = setInterval(frame, 10);
 
