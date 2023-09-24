@@ -309,7 +309,7 @@ function resetRecordingButtons() {
 
                 analyser.getByteFrequencyData(dataArrayAlt);
 
-                canvasCtx.fillStyle = "rgb(0, 0, 0)";
+                canvasCtx.fillStyle = "rgb(255, 255, 255)";
                 canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
                 var barWidth = WIDTH / bufferLengthAlt;
@@ -319,7 +319,7 @@ function resetRecordingButtons() {
                 for (var i = 0; i < bufferLengthAlt; i++) {
                     barHeight = dataArrayAlt[i];
 
-                    canvasCtx.fillStyle = "rgb(" + (barHeight + 100) + ",50,50)";
+                    canvasCtx.fillStyle = "rgb(" + (barHeight + 100) + ",200, 250)";
                     canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
 
                     x += barWidth + 1;

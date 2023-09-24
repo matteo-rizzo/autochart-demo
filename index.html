@@ -12,7 +12,8 @@
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-bar w3-black w3-padding" style="position: fixed; z-index: 2">
+<div id="nav-bar" class="w3-bar w3-ios-light-blue w3-padding"
+     style="position: fixed; z-index: 2; color: #fff !important;">
     <a class="w3-wide w3-bar-item w3-button">AUTOCHART</a>
     <div class="w3-right w3-hide-small">
         <a class="w3-bar-item w3-button">My Nurse ID: 1234</a>
@@ -25,14 +26,14 @@
 
 <!-- Page Content -->
 
-<div id="main" class="w3-ios-background" style="position: absolute; height: 100%; width: 100%;">
+<div id="main" style="position: absolute; height: 100%; width: 100%;">
 
     <!-- Analysis loading bar -->
 
     <div id="loading-bar" class="w3-container">
         <div style="position:relative; top:50%">
-            <h1>ANALYZING TRANSCRIPT WITH AI...</h1>
-            <div style="background-color: #333">
+            <h1>Analyzing transcript using AI...</h1>
+            <div style="background-color: #ffffff">
                 <div id="analysis-bar"></div>
             </div>
         </div>
@@ -48,16 +49,16 @@
 
             <div class="w3-container" style="height: 50%">
                 <div class="w3-container" style="height: 50%">
-                    <div class="w3-ios-grey w3-round-xlarge"
-                         style="padding:10px; margin-top: 6%; position: relative; z-index: 1">
+                    <div class="w3-ios-background w3-round-xlarge"
+                         style="padding:10px; position: relative; z-index: 1">
                         <div class="w3-margin w3-center" style="padding-top: 10%; padding-bottom: 2%">
                             <h3> Select a patient from your list </h3>
                             <p>This list is automatically synchronized with Cerner.</p>
-                            <div class="w3-dropdown-hover w3-center">
+                            <div id="select-patient" class="w3-dropdown-hover w3-center">
                                 <button class="w3-padding-medium w3-button" style="width: 350px">
                                     PID 1234 John Doe 03-04-67 <i class="w3-right fa-solid fa-circle-chevron-down"></i>
                                 </button>
-                                <div class="w3-dropdown-content w3-bar-block w3-border w3-light-grey w3-left  w3-round-xlarge scrollable"
+                                <div id="select-patient-dropdown" class="w3-dropdown-content w3-bar-block w3-border w3-left  w3-round-xlarge scrollable"
                                      style="width: 100%; max-height: 250px">
                                     <a class="w3-bar-item w3-button"> PID 4783 Harry Johns 03-04-67 </a>
                                     <a class="w3-bar-item w3-button"> PID 5678 Joan Smith 06-05-86 </a>
@@ -70,18 +71,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w3-cell-row w3-center" style="height: 50%; margin-top: 2%">
-                        <div class="w3-ios-grey w3-round-xlarge" style="width:49%; float:left; padding: 15px">
+                    <div class="w3-cell-row w3-center" style="height: 50%; margin-top: 1%">
+                        <div class="w3-ios-background w3-round-xlarge" style="width:49%; float:left; padding: 15px">
                             <button onclick="document.getElementById('id01').style.display='block'"
-                                    style="width: 200px; background-color: #efeff4; border: 0"
+                                    style="width: 200px; background-color: #fff; border: 0"
                                     class="w3-padding-medium w3-button w3-medium">
                                 NEW CHART <i class="w3-margin-left fa-solid fa-table"></i>
                             </button>
                             <p> Charts can be filled in through voice recording using AI technology. </p>
                         </div>
-                        <div class="w3-ios-grey w3-round-xlarge" style="width:49%; float:right; padding: 15px">
+                        <div class="w3-ios-background w3-round-xlarge" style="width:49%; float:right; padding: 15px">
                             <button onclick="document.getElementById('id03').style.display='block'"
-                                    style="width: 200px; background-color: #efeff4; border: 0"
+                                    style="width: 200px; background-color: #fff; border: 0"
                                     class="w3-padding-medium w3-button w3-medium">
                                 NEW HANDOVER <i class="w3-margin-left fa-solid fa-handshake-angle"></i>
                             </button>
@@ -95,15 +96,15 @@
 
             <div class="w3-container w3-center" style="height: 50%">
                 <div class="w3-container w3-cell w3-display-topmiddle"
-                     style="position: relative; height: 100%; width: 45%">
-                    <div class="w3-container w3-center w3-padding">
+                     style="position: relative; height: 100%; width: 45%; padding-bottom: 5%">
+                    <div class="w3-container w3-center w3-padding w3-ios-background w3-round-xlarge w3-margin">
                         <h3> Patient Charts History </h3>
                         <p>
                             This is the list of charts produced for PID 1234 John Doe 03-04-67, <br>
                             in chronological order. We pulled this data from Cerner.
                         </p>
                     </div>
-                    <div class="w3-container table-container w3-padding scrollable" style="max-height: 50%">
+                    <div class="w3-container table-container w3-padding scrollable" style="max-height: 250px">
                         <table class="table table-bordered" id="editable-table" style="width: 100%">
                             <thead>
                             <tr>
@@ -245,7 +246,7 @@
             <div class="w3-container" style="height: 50%">
                 <div class="w3-container w3-cell"
                      style="position: relative; height: 100%; width: 45%; padding-top: 10%">
-                    <div class="w3-container w3-center w3-padding">
+                    <div class="w3-container w3-center w3-padding w3-ios-background w3-round-xlarge w3-margin">
                         <h3> All Patients List Handovers </h3>
                         <p>
                             These are all the handovers produced for the patients in your list, <br>
@@ -390,7 +391,7 @@
             <div class="w3-container" style="height: 50%">
                 <div class="w3-container w3-cell"
                      style="position: relative; height: 100%; width: 45%">
-                    <div class="w3-container w3-center w3-padding">
+                    <div class="w3-container w3-center w3-padding w3-ios-background w3-round-xlarge w3-margin">
                         <h3> Patient Handovers History </h3>
                         <p>
                             This is the list of handovers produced for PID 1234 John Doe 03-04-67, <br>
@@ -536,47 +537,58 @@
     <!-- Speech-to-text CHART -->
 
     <div id="id01" class="w3-modal">
-        <div class="w3-modal-content w3-card-4" style="width: 75%">
-            <header class="w3-container w3-red">
+        <div class="w3-modal-content w3-card-4 w3-round-xlarge" style="width: 75%; height: 725px">
+            <header class="w3-container w3-round-xlarge w3-padding-large">
                 <span onclick="document.getElementById('id01').style.display='none'"
-                      class="w3-button w3-display-topright">&times;</span>
-                <h2>Modal Header</h2>
+                      class="w3-button w3-display-topright w3-padding" style="margin: 10px">&times;</span>
+                <h3> Use your voice recording to fill in the chart automatically </h3>
             </header>
 
-            <div class="w3-container w3-center w3-row-padding">
+            <hr style="margin: initial; width: 75%">
+
+            <div class="w3-container w3-center w3-row-padding w3-padding-large w3-padding-32" style="height: 725px">
 
                 <!-- Transcription -->
 
-                <div class="w3-half w3-teal">
-                    <h1>Chart report transcript</h1>
-                    <label for="transcription">The transcription of your report will show up here</label>
-                    <textarea class="w3-justify" id="transcription" rows="10" cols="50"></textarea>
-                    <button id="make-chart" onclick="textAnalysis()" class="w3-button" style="width: 70%">
-                        Make chart
-                    </button>
-                    <button id="save-recording" onclick="saveRecordingAndTranscript()" class="w3-button w3-hide"
-                            style="width: 70%">
-                        Save recording and transcript
-                    </button>
+                <div class="w3-padding w3-ios-background w3-round-xlarge" style="width: 49%; height: 575px; float: left">
+                    <h3>Chart Verbalization Transcript</h3>
+                    <label for="transcription"><p>The transcription of your report will show up here. It is
+                        editable.</p></label>
+                    <textarea class="w3-justify" style="border:0" id="transcription" rows="15" cols="70"></textarea>
+                    <div id="make-chart" class="w3-margin">
+                        <button onclick="textAnalysis()" class="w3-button" style="border: 0; background-color: #ffffff">
+                            MAKE CHART USING AI
+                        </button>
+                        <p> The transcript of the recording will be used to autocompleted you chart using AI. </p>
+                    </div>
+                    <div id="save-recording" class="w3-margin w3-hide">
+                        <button onclick="saveRecordingAndTranscript()" class="w3-button"
+                                style="border: 0; background-color: #ffffff">
+                            SAVE RECORDING AND TRANSCRIPT
+                        </button>
+                        <p> You will still be able to review and edit again everything in the next screen. </p>
+                    </div>
                 </div>
 
                 <!-- Audio recording -->
 
-                <div class="w3-half w3-black app">
-                    <select name="" id="micSelect"></select>
+                <div class="w3-padding w3-ios-background w3-round-xlarge app" style="width: 49%; height: 575px; float: right">
+                    <h3> Record Chart Verbalization </h3>
+                    <div class="w3-padding">
+                        <label style="margin-right: 5px"> Input microphone: </label>
+                        <select name="" id="micSelect"></select>
 
-                    <select id="visSelect">
-                        <option value="frequencybars">Bar</option>
-                        <option value="sinewave">Wave</option>
-                        <option value="circle">Circle</option>
-                    </select>
-
-                    <a id="download">Download</a>
+                        <select id="visSelect">
+                            <option value="frequencybars">Bar</option>
+                            <option value="sinewave">Wave</option>
+                            <option value="circle">Circle</option>
+                        </select>
+                    </div>
 
                     <div class="audio-controls">
-                        <button id="record">Record</button>
-                        <button id="stop">Stop</button>
-                        <button id="transcribe">Transcribe</button>
+                        <button id="record" class="w3-button"> Record </button>
+                        <button id="stop" class="w3-button"> Stop </button>
+                        <button id="transcribe" class="w3-button"> Transcribe </button>
                         <audio id="audio" controls></audio>
                     </div>
 
@@ -604,7 +616,7 @@
                 <div class="w3-half w3-teal">
                     <h1>Chart report transcript</h1>
                     <p> Keywords used for pre completing the chart are colored purple </p>
-                    <div class="scrollable w3-justify" style="max-height: 250px">
+                    <div class="scrollable w3-justify">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar pretium ligula eu
                             ultrices. Aenean interdum sodales sodales. Nullam tempor nec odio nec tincidunt. Sed
