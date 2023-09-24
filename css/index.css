@@ -206,3 +206,14 @@ textarea {
         margin-left: 0
     }
 }
+
+div.w3-margin.w3-center {
+    position: relative;
+    left: 60px;
+}
+
+#nurse-img {
+    position: relative;
+    right: 250px;
+    color: #5AC8FA!important;
+}
