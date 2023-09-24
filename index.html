@@ -836,11 +836,10 @@
                 <!-- Select patient/chart/data -->
 
                 <div class="w3-ios-background w3-padding w3-margin w3-round-xlarge"
-                     style="width: 23%; height: 800px; float: left">
+                     style="width: 23%; height: 825px; float: left">
                     <div class="w3-margin w3-padding">
                         <h3>Patient</h3>
-                        <p>What patient are you generating a handover for? We preselected your last processed
-                            patient </p>
+                        <p>What patient are you generating a handover for? We preselected your last patient. </p>
                         <div class="w3-dropdown-hover w3-padding-16 w3-left" style="width: 100%">
                             <button id="current-patient" class="w3-button" style="width: 100%">
                                 PID 1234 John Doe (to submit) <i class="w3-right fa-solid fa-circle-chevron-down"></i>
@@ -848,14 +847,15 @@
                             <button id="current-patient-ok" class="w3-button w3-ios-green w3-hide" style="width: 100%">
                                 PID 1234 John Doe (submitted)
                             </button>
-                            <button id="next-patient" class="w3-button w3-light-grey w3-hide" style="width: 100%">
-                                PID 5678 Joan Smith (to submit)
+                            <button id="next-patient" class="w3-button w3-hide" style="width: 100%">
+                                PID 5678 Joan Smith (to submit) <i class="w3-right fa-solid fa-circle-chevron-down"></i>
                             </button>
                             <div class="w3-dropdown-content w3-bar-block w3-border w3-round-xlarge scrollable"
                                  style="width: 100%; max-height: 250px">
                                 <a class="w3-bar-item w3-button w3-ios-green no-round"> PID 4783 Harry Johns
                                     (submitted) </a>
-                                <a id="current-patient-ok-list" class="w3-bar-item w3-button w3-ios-green w3-hide">
+                                <a id="current-patient-ok-list"
+                                   class="w3-bar-item w3-button w3-ios-green no-round w3-hide">
                                     PID 1234 John Doe (submitted)
                                 </a>
                                 <a class="w3-bar-item w3-button no-round"> PID 5678 Joan Smith (to submit) </a>
@@ -868,9 +868,8 @@
                         </div>
                     </div>
                     <div class="w3-margin w3-padding">
-                        <h3>Patient Chart</h3>
-                        <p>What patient chart do you want to extract data from? We preselected your latest chart
-                            submission</p>
+                        <h3>Patient's Chart</h3>
+                        <p>What patient chart do you want to extract data from? We preselected your latest chart.</p>
                         <div class="w3-dropdown-hover w3-padding-16 w3-left" style="width: 100%">
                             <button class="w3-button" style="width: 100%">Latest <i
                                     class="w3-right fa-solid fa-circle-chevron-down"></i></button>
@@ -883,7 +882,7 @@
                         </div>
                     </div>
                     <div class="w3-margin w3-padding">
-                        <h3>Select data group</h3>
+                        <h3>Data Group</h3>
                         <p>
                             Which data variables are you looking for? You can select predefined group of Cerner charts
                             variable. We preselected all of them.
@@ -899,34 +898,48 @@
                             </div>
                         </div>
                     </div>
+                    <div class="w3-margin w3-padding-64">
+                        <h4>View selected source on Cerner</h4>
+                        <p>Open Cerner on the data selected above.</p>
+                        <div class=" w3-padding-16">
+                            <button class="w3-button">To Cerner <i
+                                    class="w3-margin-left fa-solid fa-up-right-from-square"></i></button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Pre completed handover -->
 
                 <div class="w3-margin w3-round-xlarge"
-                     style="width: 46%; height: 800px; float: left">
+                     style="width: 46.5%; height: 800px; float: left">
 
                     <div class="w3-ios-background w3-padding w3-round-xlarge" style="margin-bottom: 2.5%">
-                        <h3> Patient's data from chart </h3>
-                        <p>'All data' from 'latest chart' of patient 'PID 1234 John Doe'</p>
+                        <h3> Patient's Data From Chart </h3>
+                        <p>'All data' from 'latest chart' of patient 'PID 1234 John Doe'. Data in <br> <b
+                                style="color: #5AC8FA">blue</b> comes
+                            from the chart, data in <i>italic</i> data was inferred by predictive AI.</p>
                         <div class="w3-padding-16">
-                            <div class="col-md-12 scrollable">
+                            <div class="col-md-12 scrollable" style="max-height:150px;">
                                 <table class="table table-bordered" id="editable-table" style="width: 100%">
                                     <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Birthday</th>
-                                        <th>Age</th>
-                                        <th>Sex</th>
+                                        <th>Oxygen</th>
+                                        <th>Blood pressure</th>
+                                        <th>Weight gain</th>
+                                        <th>Breath</th>
+                                        <th>Pulse rate</th>
+                                        <th>Orientation</th>
                                         <th>Edit</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr data-id="1">
-                                        <td id="oxygen" data-field="name">120</td>
-                                        <td data-field="birthday">May 19, 2015</td>
-                                        <td data-field="age">26</td>
-                                        <td data-field="sex">Male</td>
+                                        <td data-field="oxygen">120</td>
+                                        <td data-field="blood-pressure">340</td>
+                                        <td data-field="weight-gain">90</td>
+                                        <td data-field="breath">sneezing</td>
+                                        <td data-field="pulse-rate">60</td>
+                                        <td data-field="orientation">Oriented</td>
                                         <td>
                                             <a class="button button-small edit" title="Edit">
                                                 <i class="fa fa-pencil"></i>
@@ -937,66 +950,155 @@
                                             </a>
                                         </td>
                                     </tr>
-                                    <tr data-id="2">
-                                        <td data-field="name">Dwayne Johnson</td>
-                                        <td data-field="birthday">May 19, 2015</td>
-                                        <td data-field="age">42</td>
-                                        <td data-field="sex">Male</td>
+                                    <tr data-id="1">
+                                        <td data-field="oxygen" style="color: #5AC8FA">120</td>
+                                        <td data-field="blood-pressure">_</td>
+                                        <td data-field="weight-gain"><i>90</i></td>
+                                        <td data-field="breath" style="color: #5AC8FA">sneezing</td>
+                                        <td data-field="pulse-rate" style="color: #5AC8FA">60</td>
+                                        <td data-field="orientation"><i>Oriented</i></td>
                                         <td>
                                             <a class="button button-small edit" title="Edit">
                                                 <i class="fa fa-pencil"></i>
-                                            </a> <a class="button button-small edit" title="Delete">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
                                         </td>
                                     </tr>
-                                    <tr data-id="3">
-                                        <td data-field="name">Halyna Nadia</td>
-                                        <td data-field="birthday">May 25, 2015</td>
-                                        <td data-field="age">22</td>
-                                        <td data-field="sex">Female</td>
+                                    <tr data-id="1">
+                                        <td data-field="oxygen">120</td>
+                                        <td data-field="blood-pressure">340</td>
+                                        <td data-field="weight-gain">90</td>
+                                        <td data-field="breath">sneezing</td>
+                                        <td data-field="pulse-rate">60</td>
+                                        <td data-field="orientation">Oriented</td>
                                         <td>
                                             <a class="button button-small edit" title="Edit">
                                                 <i class="fa fa-pencil"></i>
-                                            </a> <a class="button button-small" title="Delete">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="1">
+                                        <td data-field="oxygen">120</td>
+                                        <td data-field="blood-pressure">340</td>
+                                        <td data-field="weight-gain">90</td>
+                                        <td data-field="breath">sneezing</td>
+                                        <td data-field="pulse-rate">60</td>
+                                        <td data-field="orientation">Oriented</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="1">
+                                        <td data-field="oxygen">120</td>
+                                        <td data-field="blood-pressure">340</td>
+                                        <td data-field="weight-gain">90</td>
+                                        <td data-field="breath">sneezing</td>
+                                        <td data-field="pulse-rate">60</td>
+                                        <td data-field="orientation">Oriented</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="1">
+                                        <td data-field="oxygen">120</td>
+                                        <td data-field="blood-pressure">340</td>
+                                        <td data-field="weight-gain">90</td>
+                                        <td data-field="breath">sneezing</td>
+                                        <td data-field="pulse-rate">60</td>
+                                        <td data-field="orientation">Oriented</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <div class="w3-margin w3-padding">
-                            <button class="w3-button"> TRANSFER DATA TO HANDOVER</button>
+                        <div class="w3-margin w3-row-padding w3-padding">
+                            <button class="w3-button w3-margin-right"> Full-screen View <i
+                                    class="w3-margin-left fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                            <button class="w3-button"> Transfer Data To Handover Table <i
+                                    class="w3-margin-left fa-solid fa-paper-plane"></i></button>
                         </div>
                     </div>
-
                     <div class="w3-ios-background w3-padding w3-round-xlarge">
-                        <h3>Pre completed handover</h3>
+                        <h3>Pre Completed Handover Table</h3>
                         <p>
                             The handover is filled based on charts data and predictive AI. It synchronizes with Cerner.
                         </p>
+
+                        <div class="w3-row-padding w3-padding">
+                            <div id class="w3-container">
+                                <button id="show-recorder" onclick="showRecorder()" class="w3-button">
+                                    Create Audio Recording and Transcript<i
+                                        class="w3-margin-left fa-solid fa-microphone-lines"></i> <i
+                                        class="fa-solid fa-file-lines"></i>
+                                </button>
+                            </div>
+                            <div id="check-rec" class="w3-container w3-hide">
+                                <div class="w3-container w3-third" style="text-align: right">
+                                    <button class="w3-button"> Play recording <i
+                                            class="w3-margin-left fa-solid fa-circle-play"></i></button>
+                                </div>
+                                <div class="w3-container w3-third" style="text-align: center">
+                                    <button class="w3-button"> Edit transcript <i
+                                            class="w3-margin-left fa-solid fa-user-pen"></i></button>
+                                </div>
+                                <div class="w3-container w3-third" style="text-align: left">
+                                    <button class="w3-button"> Record again <i
+                                            class="w3-margin-left fa-solid fa-microphone-lines"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="w3-padding-16">
-                            <div class="col-md-12 scrollable">
+                            <div class="col-md-12 scrollable" style="max-height:150px;">
                                 <table class="table table-bordered" id="editable-table" style="width: 100%">
                                     <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Birthday</th>
-                                        <th>Age</th>
-                                        <th>Sex</th>
+                                        <th>Oxygen</th>
+                                        <th>Blood pressure</th>
+                                        <th>Weight gain</th>
+                                        <th>Breath</th>
+                                        <th>Pulse rate</th>
+                                        <th>Orientation</th>
                                         <th>Alert</th>
                                         <th>Edit</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr data-id="1">
-                                        <td id="oxygen" data-field="name">120</td>
-                                        <td data-field="birthday">May 19, 2015</td>
-                                        <td data-field="age">26</td>
-                                        <td data-field="sex">Male</td>
-                                        <td data-field="alert" class="w3-ios-red">!!!</td>
+                                        <td data-field="oxygen">120</td>
+                                        <td data-field="blood-pressure">340</td>
+                                        <td data-field="weight-gain">90</td>
+                                        <td data-field="breath">sneezing</td>
+                                        <td data-field="pulse-rate">60</td>
+                                        <td data-field="orientation">Oriented</td>
                                         <td>
                                             <a class="button button-small edit" title="Edit">
                                                 <i class="fa fa-pencil"></i>
@@ -1007,32 +1109,89 @@
                                             </a>
                                         </td>
                                     </tr>
-                                    <tr data-id="2">
-                                        <td data-field="name">Dwayne Johnson</td>
-                                        <td data-field="birthday">May 19, 2015</td>
-                                        <td data-field="age">42</td>
-                                        <td data-field="sex">Male</td>
-                                        <td data-field="alert" class="w3-ios-green">ok</td>
+                                    <tr data-id="1">
+                                        <td data-field="oxygen" style="color: #5AC8FA">120</td>
+                                        <td data-field="blood-pressure">_</td>
+                                        <td data-field="weight-gain"><i>90</i></td>
+                                        <td data-field="breath" style="color: #5AC8FA">sneezing</td>
+                                        <td data-field="pulse-rate" style="color: #5AC8FA">60</td>
+                                        <td data-field="orientation"><i>Oriented</i></td>
                                         <td>
                                             <a class="button button-small edit" title="Edit">
                                                 <i class="fa fa-pencil"></i>
-                                            </a> <a class="button button-small edit" title="Delete">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
                                         </td>
                                     </tr>
-                                    <tr data-id="3">
-                                        <td data-field="name">Halyna Nadia</td>
-                                        <td data-field="birthday">May 25, 2015</td>
-                                        <td data-field="age">22</td>
-                                        <td data-field="sex">Female</td>
-                                        <td data-field="alert" class="w3-ios-yellow">!</td>
+                                    <tr data-id="1">
+                                        <td data-field="oxygen">120</td>
+                                        <td data-field="blood-pressure">340</td>
+                                        <td data-field="weight-gain">90</td>
+                                        <td data-field="breath">sneezing</td>
+                                        <td data-field="pulse-rate">60</td>
+                                        <td data-field="orientation">Oriented</td>
                                         <td>
                                             <a class="button button-small edit" title="Edit">
                                                 <i class="fa fa-pencil"></i>
-                                            </a> <a class="button button-small" title="Delete">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="1">
+                                        <td data-field="oxygen">120</td>
+                                        <td data-field="blood-pressure">340</td>
+                                        <td data-field="weight-gain">90</td>
+                                        <td data-field="breath">sneezing</td>
+                                        <td data-field="pulse-rate">60</td>
+                                        <td data-field="orientation">Oriented</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="1">
+                                        <td data-field="oxygen">120</td>
+                                        <td data-field="blood-pressure">340</td>
+                                        <td data-field="weight-gain">90</td>
+                                        <td data-field="breath">sneezing</td>
+                                        <td data-field="pulse-rate">60</td>
+                                        <td data-field="orientation">Oriented</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="1">
+                                        <td data-field="oxygen">120</td>
+                                        <td data-field="blood-pressure">340</td>
+                                        <td data-field="weight-gain">90</td>
+                                        <td data-field="breath">sneezing</td>
+                                        <td data-field="pulse-rate">60</td>
+                                        <td data-field="orientation">Oriented</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -1041,34 +1200,23 @@
                         </div>
 
                         <div class="w3-row-padding w3-padding">
-                            <div id class="w3-container">
-                                <button id="show-recorder" onclick="showRecorder()" class="w3-button w3-small">
-                                    CREATE AUDIO HANDOVER RECORDING AND TRANSCRIPT
-                                </button>
+                            <div class="w3-quarter">
+                                <button class="w3-button"> Full-screen View <i
+                                        class="w3-margin-left fa-solid fa-up-right-and-down-left-from-center"></i></button>
                             </div>
-                            <div id="check-rec" class="w3-hide">
-                                <div class="w3-container w3-third">
-                                    <button class="w3-button"> Play recording</button>
-                                </div>
-                                <div class="w3-container w3-third">
-                                    <button class="w3-button"> Edit transcript</button>
-                                </div>
-                                <div class="w3-container w3-third">
-                                    <button class="w3-button"> Record again</button>
-                                </div>
+                            <div class="w3-quarter">
+                                <button class="w3-button"> Print as Kardex chart <i class="w3-margin-left fa-solid fa-print"></i></button>
                             </div>
-                        </div>
-                        <div class="w3-row-padding w3-padding">
-                            <div class="w3-container w3-half" style="text-align: right">
-                                <input class="w3-check" type="checkbox" style="width: 30%">
+                            <div class="w3-container w3-quarter" style="text-align: right">
+                                <input class="w3-check" type="checkbox" style="width: 10%">
                                 <label>I reviewed</label>
                             </div>
-                            <div class="w3-container w3-half" style="text-align: left">
+                            <div class="w3-container w3-quarter" style="text-align: left">
                                 <button id="submit-handover" onclick="submitHandover()" class="w3-button">
                                     SUBMIT HANDOVER
                                 </button>
                                 <div id="success-handover" class="w3-button w3-ios-green w3-hide">
-                                    <p> HANDOVER SUBMITTED! </p>
+                                    HANDOVER SUBMITTED!
                                 </div>
                             </div>
                         </div>
@@ -1078,20 +1226,28 @@
                 <!-- Plots -->
 
                 <div class="w3-ios-background w3-padding w3-margin w3-round-xlarge"
-                     style="width: 25%; height: 800px; float: right">
+                     style="width: 25%; height: 825px; float: right">
                     <div class="w3-padding-16">
-                        <h3> Alerts and Warnings </h3>
-                        <p style="font-weight: 600"> Risk variable: OXYGEN - Severith <b class="w3-ios-red">HIGH !!!</b></p>
+                        <h3> Alerts </h3>
+                        <p style="font-weight: 600"> Risk variable: OXYGEN - Severith <b class="w3-ios-red">HIGH !!!</b>
+                        </p>
                     </div>
                     <div class="w3-container">
-                        <img style="width: 100%" src="img/plot-placeholder.png">
+                        <div class="w3-white w3-padding w3-round-xlarge">
+                            <img style="width: 100%" src="img/plot-placeholder.png">
+                        </div>
                         <p> Oxygen level trend in the last week. <br> This plot is interactive </p>
                         <div class="w3-container" style="text-align: left">
-                            <p> <b>RISK DESCRIPTION:</b> Patient XXX oxygen has been critically low for 3 days. A very bad illness might be
+                            <p><b>RISK DESCRIPTION:</b> Patient XXX oxygen has been critically low for 3 days. A very
+                                bad illness might be
                                 coming</p>
-                            <p> <b>SUGGESTION</b>: Give 10mg of this awesome medication </p>
-                            <i class="w3-small"> This suggestion was made by an AI system trained on over 1M examples. AI supports human
-                                but IT DOES NOT substitute them. Be aware of always reviewing these suggestions </i>
+                            <p><b>SUGGESTION</b>: Give 10mg of this awesome medication </p>
+                            <i class="w3-small"> This suggestion was made by an AI system trained on over 1M examples.
+                                AI supports human but IT DOES NOT substitute them. Be aware of always reviewing these
+                                suggestions </i>
+                            <div class="w3-padding-16 w3-center">
+                                <button class="w3-button">Next Alert <i class="w3-margin-left fa-solid fa-arrow-right"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
