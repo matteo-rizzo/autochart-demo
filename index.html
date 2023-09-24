@@ -58,7 +58,8 @@
                                 <button class="w3-padding-medium w3-button" style="width: 350px">
                                     PID 1234 John Doe 03-04-67 <i class="w3-right fa-solid fa-circle-chevron-down"></i>
                                 </button>
-                                <div id="select-patient-dropdown" class="w3-dropdown-content w3-bar-block w3-border w3-left  w3-round-xlarge scrollable"
+                                <div id="select-patient-dropdown"
+                                     class="w3-dropdown-content w3-bar-block w3-border w3-left  w3-round-xlarge scrollable"
                                      style="width: 100%; max-height: 250px">
                                     <a class="w3-bar-item w3-button"> PID 4783 Harry Johns 03-04-67 </a>
                                     <a class="w3-bar-item w3-button"> PID 5678 Joan Smith 06-05-86 </a>
@@ -540,7 +541,9 @@
         <div class="w3-modal-content w3-card-4 w3-round-xlarge" style="width: 75%; height: 725px">
             <header class="w3-container w3-round-xlarge w3-padding-large">
                 <span onclick="document.getElementById('id01').style.display='none'"
-                      class="w3-button w3-display-topright w3-padding" style="margin: 10px">&times;</span>
+                      class="w3-button w3-display-topright w3-padding" style="margin: 10px; border: 1px solid #5AC8FA">
+                    ╳
+                </span>
                 <h3> Use your voice recording to fill in the chart automatically </h3>
             </header>
 
@@ -550,7 +553,8 @@
 
                 <!-- Transcription -->
 
-                <div class="w3-padding w3-ios-background w3-round-xlarge" style="width: 49%; height: 575px; float: left">
+                <div class="w3-padding w3-ios-background w3-round-xlarge"
+                     style="width: 49%; height: 575px; float: left">
                     <h3>Chart Verbalization Transcript</h3>
                     <label for="transcription"><p>The transcription of your report will show up here. It is
                         editable.</p></label>
@@ -572,7 +576,8 @@
 
                 <!-- Audio recording -->
 
-                <div class="w3-padding w3-ios-background w3-round-xlarge app" style="width: 49%; height: 575px; float: right">
+                <div class="w3-padding w3-ios-background w3-round-xlarge app"
+                     style="width: 49%; height: 575px; float: right">
                     <h3> Record Chart Verbalization </h3>
                     <div class="w3-padding">
                         <label style="margin-right: 5px"> Input microphone: </label>
@@ -586,9 +591,9 @@
                     </div>
 
                     <div class="audio-controls">
-                        <button id="record" class="w3-button"> Record </button>
-                        <button id="stop" class="w3-button"> Stop </button>
-                        <button id="transcribe" class="w3-button"> Transcribe </button>
+                        <button id="record" class="w3-button"> Record</button>
+                        <button id="stop" class="w3-button"> Stop</button>
+                        <button id="transcribe" class="w3-button"> Transcribe</button>
                         <audio id="audio" controls></audio>
                     </div>
 
@@ -602,21 +607,32 @@
     <!-- Pre complete chart -->
 
     <div id="id02" class="w3-modal">
-        <div class="w3-modal-content w3-card-4" style="width: 75%">
-            <header class="w3-container w3-red">
+        <div class="w3-modal-content w3-card-4 w3-round-xlarge" style="width: 75%; height: 725px">
+            <header class="w3-container w3-round-xlarge w3-padding-large">
                 <span onclick="document.getElementById('id02').style.display='none'"
-                      class="w3-button w3-display-topright">&times;</span>
-                <h2>Modal Header</h2>
+                      class="w3-button w3-display-topright w3-padding" style="margin: 10px; border: 1px solid #5AC8FA">
+                    ╳
+                </span>
+                <h3> Review how data from your verbalization filled in the chart </h3>
             </header>
 
-            <div class="w3-container w3-center w3-row-padding">
+            <hr style="margin: initial; width: 75%">
+
+            <div class="w3-container w3-center w3-row-padding w3-padding-large w3-padding-32" style="height: 725px">
 
                 <!-- Analyzed transcript -->
 
-                <div class="w3-half w3-teal">
-                    <h1>Chart report transcript</h1>
-                    <p> Keywords used for pre completing the chart are colored purple </p>
-                    <div class="scrollable w3-justify">
+                <div class="w3-padding w3-ios-background w3-round-xlarge app"
+                     style="width: 49%; height: 575px; float: left">
+                    <h3> Chart Verbalization Transcript </h3>
+                    <p>
+                        The AI extracted the <b> keywords </b> and <b> values </b> used for pre completing your chart.
+                        <br>
+                        These are <b> bolded </b> and colored <b style="color: #5AC8FA">blue</b> in the transcript
+                        reference.
+                    </p>
+                    <div class="scrollable w3-justify w3-round-xlarge"
+                         style="padding: 15px; line-height: 1.75; max-height: 425px; background-color: #ffffff">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar pretium ligula eu
                             ultrices. Aenean interdum sodales sodales. Nullam tempor nec odio nec tincidunt. Sed
@@ -625,9 +641,10 @@
                             Suspendisse
                             vestibulum est nec quam ullamcorper pretium. Vestibulum tellus ante, sollicitudin et arcu
                             eu,
-                            semper rutrum ligula. <b class="keyword"> Oxigen level </b> in blood is <b class="keyword">
-                            120 </b>. Integer
-                            mollis turpis id nibh volutpat, placerat dapibus lectus auctor. Donec eu lacus at ligula
+                            semper rutrum ligula.<b class="keyword">Oxigen level</b> in blood is <b
+                                class="keyword">120</b>
+                            . Integermollis turpis id nibh volutpat, placerat dapibus lectus auctor. Donec eu lacus at
+                            ligula
                             luctus
                             varius aliquet quis augue. <br>
 
@@ -650,79 +667,147 @@
 
                 <!-- Pre completed chart -->
 
-                <div class="w3-half w3-purple">
-                    <h1>Pre completed chart</h1>
-
+                <div class="w3-padding w3-ios-background w3-round-xlarge app"
+                     style="width: 49%; height: 575px; float: right">
+                    <h3> Pre completed chart </h3>
+                    <p>
+                        The values in the chart are pre-filled based on the chart verbalization
+                        transcript you recorded. After you have reviewed and submitted the chart, you will find it on
+                        Cerner.
+                    </p>
                     <div class="col-md-12">
-                        <button class="btn btn-default pull-right add-row" style="width: 100%">
-                            <i class="fa fa-plus"></i>&nbsp;&nbsp; Add Row
-                        </button>
-                        <table class="table table-bordered" id="editable-table" style="width: 100%">
-                            <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Birthday</th>
-                                <th>Age</th>
-                                <th>Sex</th>
-                                <th>Edit</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr data-id="1">
-                                <td id="oxygen" data-field="name">120</td>
-                                <td data-field="birthday">May 19, 2015</td>
-                                <td data-field="age">26</td>
-                                <td data-field="sex">Male</td>
-                                <td>
-                                    <a class="button button-small edit" title="Edit">
-                                        <i class="fa fa-pencil"></i>
-                                    </a>
+                        <div class="w3-container table-container w3-padding scrollable" style="max-height: 350px">
+                            <table class="table table-bordered" id="editable-table" style="width: 100%">
+                                <thead>
+                                <tr>
+                                    <th>PID</th>
+                                    <th>Name</th>
+                                    <th>Birth Date</th>
+                                    <th>Nurse ID</th>
+                                    <th>Timestamp</th>
+                                    <th>Edit</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr id="oxygen" data-id="1">
+                                    <td data-field="pid">1234</td>
+                                    <td data-field="name">John Doe</td>
+                                    <td data-field="birth-date">03-04-67</td>
+                                    <td data-field="nurse-id">5678</td>
+                                    <td data-field="timestamp">11-12-23 05:54 AM</td>
+                                    <td>
+                                        <a class="button button-small edit" title="Edit">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
 
-                                    <a class="button button-small edit" title="Delete">
-                                        <i class="fa fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr data-id="2">
-                                <td data-field="name">Dwayne Johnson</td>
-                                <td data-field="birthday">May 19, 2015</td>
-                                <td data-field="age">42</td>
-                                <td data-field="sex">Male</td>
-                                <td>
-                                    <a class="button button-small edit" title="Edit">
-                                        <i class="fa fa-pencil"></i>
-                                    </a> <a class="button button-small edit" title="Delete">
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                                </td>
-                            </tr>
-                            <tr data-id="3">
-                                <td data-field="name">Halyna Nadia</td>
-                                <td data-field="birthday">May 25, 2015</td>
-                                <td data-field="age">22</td>
-                                <td data-field="sex">Female</td>
-                                <td>
-                                    <a class="button button-small edit" title="Edit">
-                                        <i class="fa fa-pencil"></i>
-                                    </a> <a class="button button-small" title="Delete">
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                        <a class="button button-small edit" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr data-id="2">
+                                    <td data-field="pid">1234</td>
+                                    <td data-field="name">John Doe</td>
+                                    <td data-field="birth-date">03-04-67</td>
+                                    <td data-field="nurse-id">5678</td>
+                                    <td data-field="timestamp">11-12-23 04:32 AM</td>
+                                    <td>
+                                        <a class="button button-small edit" title="Edit">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+
+                                        <a class="button button-small edit" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr data-id="3">
+                                    <td data-field="pid">1234</td>
+                                    <td data-field="name">John Doe</td>
+                                    <td data-field="birth-date">03-04-67</td>
+                                    <td data-field="nurse-id">5678</td>
+                                    <td data-field="timestamp">11-12-23 02:11 AM</td>
+                                    <td>
+                                        <a class="button button-small edit" title="Edit">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+
+                                        <a class="button button-small edit" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr data-id="4">
+                                    <td data-field="pid">1234</td>
+                                    <td data-field="name">John Doe</td>
+                                    <td data-field="birth-date">03-04-67</td>
+                                    <td data-field="nurse-id">5678</td>
+                                    <td data-field="timestamp">11-12-23 01:02 AM</td>
+                                    <td>
+                                        <a class="button button-small edit" title="Edit">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+
+                                        <a class="button button-small edit" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr data-id="5">
+                                    <td data-field="pid">1234</td>
+                                    <td data-field="name">John Doe</td>
+                                    <td data-field="birth-date">03-04-67</td>
+                                    <td data-field="nurse-id">5678</td>
+                                    <td data-field="timestamp">11-13-23 23:29 AM</td>
+                                    <td>
+                                        <a class="button button-small edit" title="Edit">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+
+                                        <a class="button button-small edit" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr data-id="6">
+                                    <td data-field="pid">1234</td>
+                                    <td data-field="name">John Doe</td>
+                                    <td data-field="birth-date">03-04-67</td>
+                                    <td data-field="nurse-id">5678</td>
+                                    <td data-field="timestamp">11-13-23 22:46 AM</td>
+                                    <td>
+                                        <a class="button button-small edit" title="Edit">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+
+                                        <a class="button button-small edit" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
 
-                    <div class="w3-row-padding">
+                    <div class="w3-row-padding w3-padding-32">
                         <div class="w3-container w3-third">
                             <input class="w3-check" type="checkbox" style="width: 30%">
                             <label>I reviewed</label>
                         </div>
-                        <div class="w3-container w3-rest">
-                            <button id="submit-chart" onclick="submitChart()" class="w3-button" style="width: 70%">
-                                Submit
+                        <div class="w3-container w3-third">
+                            <button id="submit-chart" onclick="submitChart()" class="w3-button">
+                                SUBMIT CHART
                             </button>
-                            <div id="success-chart" class="w3-button w3-green w3-hide"><p> CHART SUBMITTED! </p></div>
+                            <button id="success-chart" class="w3-button w3-ios-green w3-hide">
+                                CHART SUBMITTED!
+                            </button>
+                        </div>
+                        <div class="w3-container w3-third">
+                            <button class="w3-button add-row">
+                                <i class="fa fa-plus"></i>&nbsp;&nbsp; ADD ROW
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -733,219 +818,258 @@
 
     <!-- Create handover report -->
 
-    <div id="id03" class="w3-modal" style="padding: 0">
+    <div id="id03" class="w3-modal" style="padding: 0; display: block !important;">
         <div class="w3-modal-content w3-card-4" style="width: 100%; height: 100%">
-            <header class="w3-container w3-red">
-            <span onclick="highlightNewHandovers()"
-                  class="w3-button w3-display-topright">&times;</span>
-                <h2>I'm an header</h2>
+
+            <header class="w3-container w3-round-xlarge w3-padding-large">
+                <span onclick="highlightNewHandovers()"
+                      class="w3-button w3-display-topright w3-padding" style="margin: 10px; border: 1px solid #5AC8FA">
+                    ╳
+                </span>
+                <h3> Create your handover aided by charts data pulled from Cerner </h3>
             </header>
 
-            <div class="w3-row-padding w3-center">
+            <hr style="margin: initial; width: 75%">
+
+            <div class="w3-container w3-row-padding w3-center">
 
                 <!-- Select patient/chart/data -->
 
-                <div class="w3-quarter w3-teal">
-                    <h2>Select patient</h2>
-                    <div class="w3-dropdown-hover w3-left" style="width: 100%">
-                        <button id="current-patient" class="w3-button w3-light-grey" style="width: 100%"> PID 1234 John
-                            Doe (to submit)
-                        </button>
-                        <button id="current-patient-ok" class="w3-button w3-green w3-hide" style="width: 100%">
-                            PID 1234 John Doe (submitted)
-                        </button>
-                        <button id="next-patient" class="w3-button w3-light-grey w3-hide" style="width: 100%">
-                            PID 5678 Joan Smith (to submit)
-                        </button>
-                        <div class="w3-dropdown-content w3-bar-block w3-border scrollable"
-                             style="width: 100%; max-height: 250px">
-                            <a class="w3-bar-item w3-button w3-green"> PID 4783 Harry Johns (submitted) </a>
-                            <a id="current-patient-ok-list" class="w3-bar-item w3-button w3-green w3-hide">
+                <div class="w3-ios-background w3-padding w3-margin w3-round-xlarge"
+                     style="width: 23%; height: 800px; float: left">
+                    <div class="w3-margin w3-padding">
+                        <h3>Patient</h3>
+                        <p>What patient are you generating a handover for? We preselected your last processed
+                            patient </p>
+                        <div class="w3-dropdown-hover w3-padding-16 w3-left" style="width: 100%">
+                            <button id="current-patient" class="w3-button" style="width: 100%">
+                                PID 1234 John Doe (to submit) <i class="w3-right fa-solid fa-circle-chevron-down"></i>
+                            </button>
+                            <button id="current-patient-ok" class="w3-button w3-ios-green w3-hide" style="width: 100%">
                                 PID 1234 John Doe (submitted)
-                            </a>
-                            <a class="w3-bar-item w3-button w3-light-grey"> PID 5678 Joan Smith (to submit) </a>
-                            <a class="w3-bar-item w3-button w3-light-grey"> PID 5678 Isabel Mccarty (to submit) </a>
-                            <a class="w3-bar-item w3-button w3-light-grey"> PID 5678 Wesley Wiggins (to submit) </a>
-                            <a class="w3-bar-item w3-button w3-light-grey"> PID 5678 Kane Medina (to submit) </a>
-                            <a class="w3-bar-item w3-button w3-light-grey"> PID 5678 Sydney Cummings (to submit) </a>
-                            <a class="w3-bar-item w3-button w3-light-grey"> PID 5678 Lina Villarreal (to submit) </a>
-                        </div>
-                    </div>
-                    <h2>Select chart</h2>
-                    <div class="w3-dropdown-hover w3-left" style="width: 100%">
-                        <button class="w3-button w3-black" style="width: 100%">Latest</button>
-                        <div class="w3-dropdown-content w3-bar-block w3-border" style="width: 100%">
-                            <a href="#" class="w3-bar-item w3-button">blabla 123 something timestamp</a>
-                            <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                            <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                        </div>
-                    </div>
-                    <h2>Select data group</h2>
-                    <div class="w3-dropdown-hover w3-left" style="width: 100%">
-                        <button class="w3-button w3-black" style="width: 100%">All data</button>
-                        <div class="w3-dropdown-content w3-bar-block w3-border" style="width: 100%">
-                            <a href="#" class="w3-bar-item w3-button">Vital signs</a>
-                            <a href="#" class="w3-bar-item w3-button">Mental cognition</a>
-                            <a href="#" class="w3-bar-item w3-button">Link 3</a>
-                        </div>
-                    </div>
-                    <div class="col-md-12 scrollable">
-                        <table class="table table-bordered" id="editable-table" style="width: 100%">
-                            <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Birthday</th>
-                                <th>Age</th>
-                                <th>Sex</th>
-                                <th>Edit</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr data-id="1">
-                                <td id="oxygen" data-field="name">120</td>
-                                <td data-field="birthday">May 19, 2015</td>
-                                <td data-field="age">26</td>
-                                <td data-field="sex">Male</td>
-                                <td>
-                                    <a class="button button-small edit" title="Edit">
-                                        <i class="fa fa-pencil"></i>
-                                    </a>
-
-                                    <a class="button button-small edit" title="Delete">
-                                        <i class="fa fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr data-id="2">
-                                <td data-field="name">Dwayne Johnson</td>
-                                <td data-field="birthday">May 19, 2015</td>
-                                <td data-field="age">42</td>
-                                <td data-field="sex">Male</td>
-                                <td>
-                                    <a class="button button-small edit" title="Edit">
-                                        <i class="fa fa-pencil"></i>
-                                    </a> <a class="button button-small edit" title="Delete">
-                                    <i class="fa fa-trash"></i>
+                            </button>
+                            <button id="next-patient" class="w3-button w3-light-grey w3-hide" style="width: 100%">
+                                PID 5678 Joan Smith (to submit)
+                            </button>
+                            <div class="w3-dropdown-content w3-bar-block w3-border w3-round-xlarge scrollable"
+                                 style="width: 100%; max-height: 250px">
+                                <a class="w3-bar-item w3-button w3-ios-green no-round"> PID 4783 Harry Johns
+                                    (submitted) </a>
+                                <a id="current-patient-ok-list" class="w3-bar-item w3-button w3-ios-green w3-hide">
+                                    PID 1234 John Doe (submitted)
                                 </a>
-                                </td>
-                            </tr>
-                            <tr data-id="3">
-                                <td data-field="name">Halyna Nadia</td>
-                                <td data-field="birthday">May 25, 2015</td>
-                                <td data-field="age">22</td>
-                                <td data-field="sex">Female</td>
-                                <td>
-                                    <a class="button button-small edit" title="Edit">
-                                        <i class="fa fa-pencil"></i>
-                                    </a> <a class="button button-small" title="Delete">
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                <a class="w3-bar-item w3-button no-round"> PID 5678 Joan Smith (to submit) </a>
+                                <a class="w3-bar-item w3-button no-round"> PID 5678 Isabel Mccarty (to submit) </a>
+                                <a class="w3-bar-item w3-button no-round"> PID 5678 Wesley Wiggins (to submit) </a>
+                                <a class="w3-bar-item w3-button no-round"> PID 5678 Kane Medina (to submit) </a>
+                                <a class="w3-bar-item w3-button no-round"> PID 5678 Sydney Cummings (to submit) </a>
+                                <a class="w3-bar-item w3-button no-round"> PID 5678 Lina Villarreal (to submit) </a>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <button class="w3-button"> Fill in selected data</button>
+                    <div class="w3-margin w3-padding">
+                        <h3>Patient Chart</h3>
+                        <p>What patient chart do you want to extract data from? We preselected your latest chart
+                            submission</p>
+                        <div class="w3-dropdown-hover w3-padding-16 w3-left" style="width: 100%">
+                            <button class="w3-button" style="width: 100%">Latest <i
+                                    class="w3-right fa-solid fa-circle-chevron-down"></i></button>
+                            <div class="w3-dropdown-content w3-bar-block w3-border w3-round-xlarge scrollable"
+                                 style="width: 100%; max-height: 250px">
+                                <a class="w3-bar-item w3-button no-round">11-12-23 05:54 AM</a>
+                                <a class="w3-bar-item w3-button no-round">11-12-23 04:32 AM</a>
+                                <a class="w3-bar-item w3-button no-round">11-12-23 02:11 AM</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-margin w3-padding">
+                        <h3>Select data group</h3>
+                        <p>
+                            Which data variables are you looking for? You can select predefined group of Cerner charts
+                            variable. We preselected all of them.
+                        </p>
+                        <div class="w3-dropdown-hover w3-padding-16 w3-left" style="width: 100%">
+                            <button class="w3-button" style="width: 100%">All data <i
+                                    class="w3-right fa-solid fa-circle-chevron-down"></i></button>
+                            <div class="w3-dropdown-content w3-bar-block w3-border w3-round-xlarge scrollable"
+                                 style="width: 100%; max-height: 250px">
+                                <a class="w3-bar-item w3-button">Vital signs</a>
+                                <a class="w3-bar-item w3-button">Mental cognition</a>
+                                <a class="w3-bar-item w3-button">Pain</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Pre completed handover -->
 
-                <div class="w3-half w3-purple">
-                    <h2>Pre completed handover</h2>
+                <div class="w3-margin w3-round-xlarge"
+                     style="width: 46%; height: 800px; float: left">
 
-                    <div class="col-md-12 scrollable">
-                        <table class="table table-bordered" id="editable-table" style="width: 100%">
-                            <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Birthday</th>
-                                <th>Age</th>
-                                <th>Sex</th>
-                                <th>Alert</th>
-                                <th>Edit</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr data-id="1">
-                                <td id="oxygen" data-field="name">120</td>
-                                <td data-field="birthday">May 19, 2015</td>
-                                <td data-field="age">26</td>
-                                <td data-field="sex">Male</td>
-                                <td data-field="alert" class="w3-red">!!!</td>
-                                <td>
-                                    <a class="button button-small edit" title="Edit">
-                                        <i class="fa fa-pencil"></i>
-                                    </a>
+                    <div class="w3-ios-background w3-padding w3-round-xlarge" style="margin-bottom: 2.5%">
+                        <h3> Patient's data from chart </h3>
+                        <p>'All data' from 'latest chart' of patient 'PID 1234 John Doe'</p>
+                        <div class="w3-padding-16">
+                            <div class="col-md-12 scrollable">
+                                <table class="table table-bordered" id="editable-table" style="width: 100%">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Birthday</th>
+                                        <th>Age</th>
+                                        <th>Sex</th>
+                                        <th>Edit</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr data-id="1">
+                                        <td id="oxygen" data-field="name">120</td>
+                                        <td data-field="birthday">May 19, 2015</td>
+                                        <td data-field="age">26</td>
+                                        <td data-field="sex">Male</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
 
-                                    <a class="button button-small edit" title="Delete">
-                                        <i class="fa fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr data-id="2">
-                                <td data-field="name">Dwayne Johnson</td>
-                                <td data-field="birthday">May 19, 2015</td>
-                                <td data-field="age">42</td>
-                                <td data-field="sex">Male</td>
-                                <td data-field="alert" class="w3-green">ok</td>
-                                <td>
-                                    <a class="button button-small edit" title="Edit">
-                                        <i class="fa fa-pencil"></i>
-                                    </a> <a class="button button-small edit" title="Delete">
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                                </td>
-                            </tr>
-                            <tr data-id="3">
-                                <td data-field="name">Halyna Nadia</td>
-                                <td data-field="birthday">May 25, 2015</td>
-                                <td data-field="age">22</td>
-                                <td data-field="sex">Female</td>
-                                <td data-field="alert" class="w3-yellow">!</td>
-                                <td>
-                                    <a class="button button-small edit" title="Edit">
-                                        <i class="fa fa-pencil"></i>
-                                    </a> <a class="button button-small" title="Delete">
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="w3-row-padding">
-                        <div id class="w3-container">
-                            <button id="show-recorder" onclick="showRecorder()" class="w3-button" style="width: 70%">
-                                Record audio report and generate transcript
-                            </button>
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="2">
+                                        <td data-field="name">Dwayne Johnson</td>
+                                        <td data-field="birthday">May 19, 2015</td>
+                                        <td data-field="age">42</td>
+                                        <td data-field="sex">Male</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a> <a class="button button-small edit" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="3">
+                                        <td data-field="name">Halyna Nadia</td>
+                                        <td data-field="birthday">May 25, 2015</td>
+                                        <td data-field="age">22</td>
+                                        <td data-field="sex">Female</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a> <a class="button button-small" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div id="check-rec" class="w3-hide">
-                            <div class="w3-container w3-third">
-                                <button class="w3-button"> Play recording</button>
-                            </div>
-                            <div class="w3-container w3-third">
-                                <button class="w3-button"> Edit transcript</button>
-                            </div>
-                            <div class="w3-container w3-third">
-                                <button class="w3-button"> Record again</button>
-                            </div>
+                        <div class="w3-margin w3-padding">
+                            <button class="w3-button"> TRANSFER DATA TO HANDOVER</button>
                         </div>
                     </div>
-                    <div class="w3-row-padding">
-                        <div class="w3-container w3-third">
-                            <input class="w3-check" type="checkbox" style="width: 30%">
-                            <label>I reviewed</label>
+
+                    <div class="w3-ios-background w3-padding w3-round-xlarge">
+                        <h3>Pre completed handover</h3>
+                        <p>
+                            The handover is filled based on charts data and predictive AI. It synchronizes with Cerner.
+                        </p>
+                        <div class="w3-padding-16">
+                            <div class="col-md-12 scrollable">
+                                <table class="table table-bordered" id="editable-table" style="width: 100%">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Birthday</th>
+                                        <th>Age</th>
+                                        <th>Sex</th>
+                                        <th>Alert</th>
+                                        <th>Edit</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr data-id="1">
+                                        <td id="oxygen" data-field="name">120</td>
+                                        <td data-field="birthday">May 19, 2015</td>
+                                        <td data-field="age">26</td>
+                                        <td data-field="sex">Male</td>
+                                        <td data-field="alert" class="w3-ios-red">!!!</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+
+                                            <a class="button button-small edit" title="Delete">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="2">
+                                        <td data-field="name">Dwayne Johnson</td>
+                                        <td data-field="birthday">May 19, 2015</td>
+                                        <td data-field="age">42</td>
+                                        <td data-field="sex">Male</td>
+                                        <td data-field="alert" class="w3-ios-green">ok</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a> <a class="button button-small edit" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                        </td>
+                                    </tr>
+                                    <tr data-id="3">
+                                        <td data-field="name">Halyna Nadia</td>
+                                        <td data-field="birthday">May 25, 2015</td>
+                                        <td data-field="age">22</td>
+                                        <td data-field="sex">Female</td>
+                                        <td data-field="alert" class="w3-ios-yellow">!</td>
+                                        <td>
+                                            <a class="button button-small edit" title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </a> <a class="button button-small" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div class="w3-container w3-rest">
-                            <button id="submit-handover" onclick="submitHandover()" class="w3-button"
-                                    style="width: 70%">
-                                Submit handover for patient 1234
-                            </button>
-                            <div id="success-handover" class="w3-button w3-green w3-hide">
-                                <p> HANDOVER SUBMITTED! </p>
+
+                        <div class="w3-row-padding w3-padding">
+                            <div id class="w3-container">
+                                <button id="show-recorder" onclick="showRecorder()" class="w3-button w3-small">
+                                    CREATE AUDIO HANDOVER RECORDING AND TRANSCRIPT
+                                </button>
+                            </div>
+                            <div id="check-rec" class="w3-hide">
+                                <div class="w3-container w3-third">
+                                    <button class="w3-button"> Play recording</button>
+                                </div>
+                                <div class="w3-container w3-third">
+                                    <button class="w3-button"> Edit transcript</button>
+                                </div>
+                                <div class="w3-container w3-third">
+                                    <button class="w3-button"> Record again</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding w3-padding">
+                            <div class="w3-container w3-half" style="text-align: right">
+                                <input class="w3-check" type="checkbox" style="width: 30%">
+                                <label>I reviewed</label>
+                            </div>
+                            <div class="w3-container w3-half" style="text-align: left">
+                                <button id="submit-handover" onclick="submitHandover()" class="w3-button">
+                                    SUBMIT HANDOVER
+                                </button>
+                                <div id="success-handover" class="w3-button w3-ios-green w3-hide">
+                                    <p> HANDOVER SUBMITTED! </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -953,27 +1077,25 @@
 
                 <!-- Plots -->
 
-                <div class="w3-quarter w3-black">
-                    <div>
-                        <h2>History plot of Oxygen</h2>
+                <div class="w3-ios-background w3-padding w3-margin w3-round-xlarge"
+                     style="width: 25%; height: 800px; float: right">
+                    <div class="w3-padding-16">
+                        <h3> Alerts and Warnings </h3>
+                        <p style="font-weight: 600"> Risk variable: OXYGEN - Severith <b class="w3-ios-red">HIGH !!!</b></p>
                     </div>
                     <div class="w3-container">
                         <img style="width: 100%" src="img/plot-placeholder.png">
-                        <div class="w3-container">
-                            <h2 class="w3-red"> ALERT </h2>
-                            <p> Patient XXX oxygen has been critically low for 3 days. A very bad illness might be
+                        <p> Oxygen level trend in the last week. <br> This plot is interactive </p>
+                        <div class="w3-container" style="text-align: left">
+                            <p> <b>RISK DESCRIPTION:</b> Patient XXX oxygen has been critically low for 3 days. A very bad illness might be
                                 coming</p>
-                            <p> SUGGESTION: Give 10mg of this awesome medication </p>
-                            <i> This suggestion was made by an AI system trained on over 1M examples. AI supports human
+                            <p> <b>SUGGESTION</b>: Give 10mg of this awesome medication </p>
+                            <i class="w3-small"> This suggestion was made by an AI system trained on over 1M examples. AI supports human
                                 but IT DOES NOT substitute them. Be aware of always reviewing these suggestions </i>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <footer class="w3-container w3-red">
-                <p>Modal Footer</p>
-            </footer>
         </div>
     </div>
 

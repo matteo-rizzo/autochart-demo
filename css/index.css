@@ -34,10 +34,6 @@ select {
     border-radius: 32px;
 }
 
-a {
-    margin-left: 20px;
-}
-
 .app {
     text-align: center;
     padding-top: 20px;
@@ -47,12 +43,6 @@ a {
 
 
 /* --- START editable table START --- */
-
-.button.button-small {
-    height: 30px;
-    line-height: 30px;
-    padding: 0px 10px;
-}
 
 td input[type=text],
 td select {
@@ -118,13 +108,14 @@ table th, table td {
 
 /* --- END Scrollable table END --- */
 
-.highlight {
-    color: red;
-    background-color: blue;
+.keyword {
+    font-weight: bolder;
+    color: #5AC8FA;
 }
 
-b {
-    color: blueviolet;
+.highlight {
+    color: #ffffff;
+    background-color: #ff2d55;
 }
 
 body, h1, h2, h3, h4, h5, h6 {
@@ -142,7 +133,7 @@ th {
 hr {
     margin: auto;
     width: 300px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #efeff4;
 }
 
 textarea {
@@ -175,6 +166,10 @@ textarea {
     border: 0;
     background-color: #ffffff;
     color: #007AFF;
+}
+
+.no-round {
+    border-radius: 0;
 }
 
 .w3-row-padding img {

@@ -14,13 +14,13 @@ function resetHomeScreen() {
 
 function showNewChart() {
     let newChart = document.getElementById("new-chart");
-    newChart.classList.add("w3-green");
+    newChart.classList.add("w3-ios-green");
     newChart.classList.remove("w3-hide");
 }
 
 function hideNewChart() {
     let newChart = document.getElementById("new-chart");
-    newChart.classList.remove("w3-green");
+    newChart.classList.remove("w3-ios-green");
 }
 
 function submitHandover() {
@@ -55,18 +55,18 @@ function highlightNewHandovers() {
 
 function showNewHandover() {
     let newHandover = document.getElementById("new-handover");
-    newHandover.classList.add("w3-green");
+    newHandover.classList.add("w3-ios-green");
     newHandover.classList.remove("w3-hide");
 
     let newPatientHandover = document.getElementById("new-patient-handover");
-    newPatientHandover.classList.add("w3-green");
+    newPatientHandover.classList.add("w3-ios-green");
     newPatientHandover.classList.remove("w3-hide");
 }
 
 function hideNewHandover() {
     let newHandover = document.getElementById("new-handover");
-    newHandover.classList.remove("w3-green");
+    newHandover.classList.remove("w3-ios-green");
 
     let newPatientHandover = document.getElementById("new-patient-handover");
-    newPatientHandover.classList.remove("w3-green");
+    newPatientHandover.classList.remove("w3-ios-green");
 }
